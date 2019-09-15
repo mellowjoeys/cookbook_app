@@ -1,11 +1,3 @@
 @recipes.map do |recipe|
-  {
-    id: recipe.id, 
-    title: recipe.title,
-    chef: recipe.chef,
-    prep_time: recipe.prep_time, 
-    ingredients: recipe.ingredients,
-    directions: recipe.directions,
-    image_url: recipe.image_url
-  }
+  render partial: "recipe.json.jb", locals: {recipe: recipe}
 end
