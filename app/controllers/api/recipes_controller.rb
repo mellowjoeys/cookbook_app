@@ -50,6 +50,7 @@ class Api::RecipesController < ApplicationController
     # recipe_id = params[:id] this is one way 
     # @recipe = Recipe.find_by(id: recipe_id)
     @recipe = Recipe.find(params[:id])
+    # render 'show.html.erb'
     render 'show.json.jb'
   end
 
